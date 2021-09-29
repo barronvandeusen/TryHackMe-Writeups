@@ -1,3 +1,3 @@
 ABSTRACT
 
-GhostCat is a tryhackme machine with an easy rating revolving around the exploitation of CVE-2020-1938. The approach to this machine was fairly straightforward - beginning with a port scan, we determined the Apache JServ protocol was running. A search of exploitdb (and searchsploit) yielded a metasploit module. Running this revealed plaintext credentials which we used to establish a foothold in the machine. Escalataion to root is forthcoming at this time.
+GhostCat is a tryhackme machine with an easy rating revolving around the exploitation of CVE-2020-1938. The approach to this machine was fairly straightforward - beginning with a port scan, we determined the Apache JServ protocol was running. A search of exploitdb (and searchsploit) yielded a metasploit module. Running this revealed plaintext credentials which we used to establish a foothold in the machine. Escalataion to root is forthcoming at this time. 
