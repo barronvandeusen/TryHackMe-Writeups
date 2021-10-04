@@ -37,13 +37,6 @@ Armed with this information, I trotted over to exploitdb and ran a search for Ap
 
 Let's fire up metasploit and find our module:
 
-msf6 > search AJP
-
-Matching Modules
-================
-
-   #  Name                                    Disclosure Date  Rank       Check  Description
-   -  ----                                    ---------------  ----       -----  -----------
    0  auxiliary/admin/http/tomcat_ghostcat    2020-02-20       normal     No     Ghostcat
    1  exploit/linux/http/netgear_unauth_exec  2016-02-25       excellent  Yes    Netgear Devices Unauthenticated Remote Command Execution
    
