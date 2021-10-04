@@ -10,7 +10,7 @@ export IP=[Target IP Address}
 
 From there we can begin enumeration. To start, we'll run an nmap scap with my standard parameters:
 
-sudo nmap -sC -sV -O -on initial_scan.txt $IP
+sudo nmap -sC -sV -O -oN initial_scan.txt $IP
 
 I will also run a second scan on all ports:
 
