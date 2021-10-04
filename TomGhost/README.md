@@ -18,17 +18,29 @@ nmap -p- $IP
 
 The first scan results indicate the machine is running Apache Tomcat
 PORT     STATE SERVICE    VERSION
+
 22/tcp   open  ssh        OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+
 | ssh-hostkey: 
+
 |   2048 f3:c8:9f:0b:6a:c5:fe:95:54:0b:e9:e3:ba:93:db:7c (RSA)
+
 |   256 dd:1a:09:f5:99:63:a3:43:0d:2d:90:d8:e3:e1:1f:b9 (ECDSA)
+
 |_  256 48:d1:30:1b:38:6c:c6:53:ea:30:81:80:5d:0c:f1:05 (ED25519)
+
 53/tcp   open  tcpwrapped
+
 8009/tcp open  ajp13      Apache Jserv (Protocol v1.3)
+
 | ajp-methods: 
+
 |_  Supported methods: GET HEAD POST OPTIONS
+
 8080/tcp open  http       Apache Tomcat 9.0.30
+
 |_http-favicon: Apache Tomcat
+
 |_http-title: Apache Tomcat/9.0.30
 
 Armed with this information, I trotted over to exploitdb and ran a search for Apache 9. The first among the listed results that caught my eye was "Apache Tomcat - AJP 'Ghostcat' File Read/Inclusion (Metasploit)". One, AJP matched with the nmap results I'd already seen. Two, it was a metasploit module, and I'm not above taking the easy road if it gets me to the same place faster. I've since checked some other walkthroughs and there's a single line of python that will accomplish the same as what I"m fixing to do.
@@ -38,6 +50,7 @@ Armed with this information, I trotted over to exploitdb and ran a search for Ap
 Let's fire up metasploit and find our module:
 
    0  auxiliary/admin/http/tomcat_ghostcat    2020-02-20       normal     No     Ghostcat
+   
    1  exploit/linux/http/netgear_unauth_exec  2016-02-25       excellent  Yes    Netgear Devices Unauthenticated Remote Command Execution
    
 Nothing too fancy to do here. Select the ghostcat module, set the required options (in this case we only need RHOSTS) and run the command. This yields a set of what look like credentials. We try to ssh into our machine with said credentials and we have success! We're in as user skyfuck. Let's take a peek around.
