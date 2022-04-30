@@ -1,5 +1,5 @@
 Target IP = 10.10.47.244
-My IP = 10.6.39.134
+
 
 Let's start with the nmap scan
 
