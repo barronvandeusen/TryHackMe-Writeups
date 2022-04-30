@@ -31,6 +31,7 @@ Results: a read-only share called websvr
 smbclient \\\\C:\\websvr -I 10.10.47.244
 
 We find a file, enter.txt
+
 GOALS
 =====
 1)Make fake popup and host it online on Digital Ocean server
@@ -45,13 +46,9 @@ Wordpress creds
 |->
 
 Okay, let's sort that password out first. "Magical formula" means we're heading over to CyberChef to unmagic it.
-Turns out the password is Scam2021
+This gives us our 
 
-Okay, let's enumerate some more before we go any further. Full port scan:
-
-gobuster:
-
-And let's google around about Subrion. The default install is under $Machine_IP/subrion/admin. Try that and we get redirected to:
+Okay, let's google around about Subrion. The default install is under $Machine_IP/subrion/admin. Try that and we get redirected to:
 
 https://10.0.2.15/subrion/subrion/admin/
 
