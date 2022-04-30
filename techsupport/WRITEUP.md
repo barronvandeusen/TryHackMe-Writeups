@@ -46,7 +46,7 @@ Wordpress creds
 |->
 
 Okay, let's sort that password out first. "Magical formula" means we're heading over to CyberChef to unmagic it.
-This gives us our 
+This gives us our password for Suberion. Now we just have to find where to leverage it.
 
 Okay, let's google around about Subrion. The default install is under $Machine_IP/subrion/admin. Try that and we get redirected to:
 
