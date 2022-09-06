@@ -39,7 +39,7 @@ There's a mongo database running on this machine, and it looks like there's no l
 
 ## Escalation
 
-We see right off the bat that webdeveloper can run sky_utility_backup with elevated privilges, but the LD_PRELOAD stuck out at me - I don't recall seeing that before.
+We see right off the bat that webdeveloper can run sky_backup_utility with elevated privilges, but the LD_PRELOAD stuck out at me - I don't recall seeing that before.
 
 ![sudo_dash_l](https://user-images.githubusercontent.com/6416242/188539500-cb8ce826-968a-48e6-8562-3de18a1a6914.PNG)
 
